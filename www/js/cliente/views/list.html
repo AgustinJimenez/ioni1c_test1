@@ -1,0 +1,16 @@
+<ion-view view-title="Lista de Clientes">
+	<ion-content ng-controller = "ClienteController">
+	    <div class="padding">
+	    	<a class="button button-block button-positive" href="/#/create">
+	    		AGREGAR
+	    	</a>
+	    </div>
+	    <ion-list>
+	    	<ion-item href="/#/edit/{{cliente.id}}" ng-repeat="cliente in clientes" class="item-remove-animate">
+		        <h2>{{ cliente.razon_social }}</h2>
+		        <p><b>CI:</b> {{ cliente.cedula }}</p> 
+		        <ion-option-button class="button-assertive" ng-click="destroy(cliente.id)">ELIMINAR</ion-option-button>
+	    	</ion-item>
+	    </ion-list>
+	</ion-content>
+</ion-view>

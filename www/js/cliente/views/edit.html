@@ -1,0 +1,21 @@
+
+<ion-view view-title="Editar Cliente">
+	<ion-content ng-controller = "ClienteController">
+
+		<div class="list card">
+			<div class="item-input">
+				<input type="text" ng-model="cliente.razon_social" placeholder="Razon Social">
+			</div>
+			<div class="item-input">
+				<input type="text" ng-model="cliente.cedula" placeholder="Cedula">
+			</div>
+		</div>
+		<div class="list card">
+			<div class="padding">
+				<button class="button button-block button-positive" ng-click="save()">
+					GUARDAR
+				</button>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>
